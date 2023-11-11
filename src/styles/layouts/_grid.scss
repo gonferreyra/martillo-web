@@ -1,0 +1,35 @@
+.row {
+  // max-width: 114rem;
+  // background-color: #eee;
+  margin: 0 auto;
+
+  // margin-bottom only on the last child
+  &:not(:last-child) {
+    margin-bottom: 8rem;
+  }
+
+  [class^='col-'] {
+    // background-color: orangered;
+    float: left;
+  }
+
+  // .col-1-of-2 {
+  //   // (width 100% - gap) / number of columns
+  //   width: calc((100% - 6rem) / 2);
+  // }
+
+  .col-1-of-3 {
+    width: calc((100% - 12rem) / 3);
+
+    &:not(:last-child) {
+      margin-right: 6rem;
+    }
+  }
+
+  // clearfix to fix float (.row showing height 0)
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

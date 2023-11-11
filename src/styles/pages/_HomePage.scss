@@ -1,0 +1,170 @@
+// HERO
+.hero {
+  position: relative;
+  padding-top: 20px;
+
+  @media screen and (min-width: 991px) {
+    padding-top: 0;
+  }
+
+  .hero-container {
+    max-width: 100%;
+    padding-right: 40px;
+    padding-left: 40px;
+
+    // @media screen and (min-width: 991px) {
+    //   max-width: 100%;
+    //   padding-right: 40px;
+    //   padding-left: 40px;
+    // }
+
+    @media screen and (min-width: 1440px) {
+      max-width: 1400px;
+      margin: auto;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-row-gap: 1.6rem;
+      grid-column-gap: 16px;
+      grid-template-rows: auto;
+      align-items: end;
+
+      @media screen and (min-width: 991px) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .hero-content {
+        padding-top: 40px;
+        padding-bottom: 40px;
+
+        @media screen and (min-width: 991px) {
+          padding-top: 60px;
+          padding-bottom: 90px;
+        }
+        h1 {
+          margin-top: 15px;
+          margin-bottom: 10px;
+          font-family: 'Cormorant Garamond', serif;
+          font-size: 3.4rem;
+          font-weight: 700;
+          line-height: 1.2;
+
+          @media screen and (min-width: 479px) {
+            font-size: 4rem;
+          }
+
+          @media screen and (min-width: 767px) {
+            font-size: 5rem;
+          }
+
+          @media screen and (min-width: 1280px) {
+            margin-top: 15px;
+            margin-bottom: 10px;
+            font-size: 65px;
+          }
+        }
+        p {
+          margin-top: 15px;
+          margin-bottom: 25px;
+          color: $color-1;
+          line-height: 1.6;
+          font-size: 1.8rem;
+
+          @media screen and (min-width: 479px) {
+            line-height: 1.8;
+          }
+
+          @media screen and (min-width: 767px) {
+            line-height: 1.8;
+            font-size: 2rem;
+          }
+
+          @media screen and (min-width: 1280px) {
+            font-size: 2.2rem;
+          }
+        }
+        button {
+          margin: 10px 10px 10px 0;
+          padding: 20px 30px;
+          font-family: inherit;
+          color: $color-2;
+          font-size: 1.8rem;
+          font-weight: 500;
+          text-align: center;
+          border: 1px solid $color-1;
+          background-color: $color-1;
+          cursor: pointer;
+          transition: all 0.2s, color 0.2s;
+
+          &:hover {
+            background-color: transparent;
+            color: $color-1;
+          }
+
+          @media screen and (min-width: 479px) {
+            padding: 20px 50px;
+            font-size: 2rem;
+          }
+        }
+      }
+      .hero-image {
+        img {
+          max-width: 100%;
+          vertical-align: middle;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+// Auctios
+
+.section-auctions {
+  position: absolute;
+  padding: 4rem;
+  background-color: $color-4;
+
+  &-container {
+    margin-bottom: 4rem;
+    .auctions-text {
+      display: flex;
+      flex-direction: column;
+      @media screen and (min-width: 991px) {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      &-title {
+        margin-bottom: 2rem;
+        flex: 1;
+        h2 {
+          font-family: $font-family-CormorantGaramond;
+          font-size: 3rem;
+        }
+      }
+
+      &-separator {
+        flex: 0.2;
+        border: 1px solid $color-7;
+        transform: rotate(90deg);
+        max-width: 5%;
+        opacity: 0;
+
+        @media screen and (min-width: 991px) {
+          opacity: 1;
+        }
+      }
+
+      p {
+        font-family: $font-family-Outfit;
+        color: $color-5;
+        font-size: 1.8rem;
+        flex: 1;
+      }
+    }
+  }
+}

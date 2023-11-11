@@ -1,0 +1,110 @@
+// .card {
+//   perspective: 150rem;
+//   -moz-perspective: 150rem;
+//   position: relative;
+//   height: 50rem;
+
+//   &__side {
+//     color: #fff;
+//     font-size: 2rem;
+
+//     height: 50rem;
+//     transition: all 0.8s ease;
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     backface-visibility: hidden;
+//     border-radius: 3px;
+//     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
+
+//     &--front {
+//       background-color: orangered;
+//     }
+
+//     &--back {
+//       background-color: green;
+//       transform: rotateY(-180deg);
+//     }
+//   }
+
+//   &:hover &__side--front {
+//     transform: rotateY(180deg);
+//   }
+
+//   &:hover &__side--back {
+//     transform: rotateY(0);
+//   }
+// }
+
+.cards-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.card {
+  padding: 3rem;
+  background-color: #1f2732;
+  min-height: auto;
+  // Ver min-height para que todas tengan la misma altura
+  // margin-bottom: 3rem;
+
+  &__heading {
+    font-family: $font-family-CormorantGaramond;
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+  }
+
+  &__text {
+    font-size: 1.8rem;
+    font-weight: 200;
+    border-bottom: 1px solid $color-7;
+    padding-bottom: 2rem;
+  }
+
+  &__footer {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      width: 3rem;
+      height: 3rem;
+      @media screen and (min-width: 768px) {
+        align-self: center;
+      }
+    }
+
+    button {
+      margin: 10px 10px 10px 0;
+      padding: 20px 30px;
+      font-family: inherit;
+      color: #1f2732;
+      font-size: 1.8rem;
+      font-weight: 500;
+      text-align: center;
+      border: 1px solid #d1b06b;
+      background-color: #d1b06b;
+      cursor: pointer;
+      transition: all 0.2s, color 0.2s;
+
+      &:hover {
+        background-color: transparent;
+        color: $color-1;
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-direction: column;
+      align-items: normal;
+    }
+  }
+}

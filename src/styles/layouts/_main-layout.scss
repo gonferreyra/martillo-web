@@ -1,0 +1,16 @@
+.main-layout {
+  position: relative;
+  background-image: url('/src/assets/images/hero-background.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(31, 39, 50, 0.55);
+}
